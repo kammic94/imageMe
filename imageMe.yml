@@ -11,15 +11,15 @@
                 repo: https://github.com/jkanclerz/google-search-python.git
                 version: master
                 dest: /home/ec2-user/imageMe
-      - name: "test1"
+      - name: "Set SEARCH_ENGINE"
         shell: "echo 'export SEARCH_ENGINE_ID=006879359584856769921:rplfy3clmho' >> .bashrc "
-      - name: "test2"
+      - name: "Set GOOGLE_CLOUD_API"
         shell: "echo 'GOOGLE_CLOUD_API_KEY=AIzaSyDLLC1pqOxkWA8jUjM-Cfwbl_13Sh_2t98' >> .bashrc"
-      - name: "creating directory"
+      - name: "creat directory"
         file:
                 path: /home/ec2-user/bin
                 state: directory
-      - name: "copying file"
+      - name: "copy file"
         copy:
                 src: ./imageMe2.sh
                 dest: /home/ec2-user/bin/imageMe.sh
